@@ -24,16 +24,20 @@ const Navbar = () => {
         {
             name: "Post",
             link: '/post',
-        }
+        },
+        {
+            name: "Meal",
+            link: '/meal',
+        },
     ];
 
     return <>
         <div className="my-5">
             <nav className="">  
-                <ul className="flex justify-center italic w-[27%] mx-auto border-[1px] rounded-3xl bg-black">
+                <ul className="flex justify-center italic w-[32%] mx-auto border-[1px] rounded-3xl bg-black">
                 {
                     navLinks.map(({name,link})=>(
-                        <li key={link} className={` ${router.pathname === link ? 'font-bold text-amber-700': 'text-white'}  px-3 py-2 ${name === 'Post' ? '' : 'border-r-[1px]'}`}>
+                        <li key={link} className={` ${router.pathname === link ? 'font-bold text-amber-700': 'text-white'}  px-3 py-2 ${name === 'Meal' ? '' : 'border-r-[1px]'}`}>
                             <Link href={{pathname: link}}>{name}</Link>
                         </li>
                     ))
